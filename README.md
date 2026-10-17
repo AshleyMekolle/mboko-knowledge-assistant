@@ -1,15 +1,10 @@
-<p align="center">
-  <img src="images/hero.jpg" alt="Mboko Media Group" width="100%">
-</p>
+# Mboko Media Group
 
-<h1 align="center">Mboko Media Group</h1>
+**Our stories. Our world.**
 
-<p align="center"><strong>Our stories. Our world.</strong></p>
+![Mboko Media Group](images/hero.jpg)
 
-<p align="center">
-  Documentaries · Interviews · Digital series · Editorial · Branded campaigns<br>
-  Douala, Cameroon
-</p>
+Documentaries · Interviews · Digital series · Editorial · Branded campaigns | Douala, Cameroon
 
 > **Fictional company.** Mboko Media Group is not a real business. It was created as a realistic, fully documented company to power the [Mboko Knowledge Assistant](#about-this-repository), an internal AI assistant built with retrieval-augmented generation (RAG). Every policy, person and production here is invented.
 
@@ -19,10 +14,9 @@ Mboko Media Group is a Cameroonian media and creative production company based i
 
 We work in both French and English, the way Cameroon does. A story might start in a Bonabéri workshop, a Yaoundé start-up or a village festival in the West Region, and end up on screens across the continent.
 
-<p align="center">
-  <img src="images/douala-street.jpg" alt="Street life in Douala" width="49%">
-  <img src="images/on-set.jpg" alt="Mboko crew filming on location" width="49%">
-</p>
+| | |
+|---|---|
+| ![Street life in Douala](images/douala-street.jpg) | ![Mboko crew filming on location](images/on-set.jpg) |
 
 ## Mission
 
@@ -42,11 +36,9 @@ We believe the people closest to a story should shape how it is told. Our job is
 
 ## What we make
 
-<p align="center">
-  <img src="images/interview.jpg" alt="Interview production" width="32%">
-  <img src="images/editorial.jpg" alt="Editorial team at work" width="32%">
-  <img src="images/creative.jpg" alt="Creative and design studio" width="32%">
-</p>
+| | | |
+|---|---|---|
+| ![Interview production](images/interview.jpg) | ![Editorial team at work](images/editorial.jpg) | ![Creative and design studio](images/creative.jpg) |
 
 | Format | Description |
 |---|---|
@@ -76,9 +68,7 @@ Mboko has six departments. Each one owns its own policies and procedures, which 
 | 👥 **People and Administration** | Handles recruitment, onboarding, leave, workplace policy and staff records | Employee handbook, leave policy, code of conduct, onboarding guide, workplace procedures |
 | 💼 **Finance and Operations** | Oversees budgets, reimbursements, purchasing, travel and planning | Expense policy, reimbursement rules, purchasing procedure, travel policy, budget approvals |
 
-<p align="center">
-  <img src="images/team.jpg" alt="The Mboko team" width="100%">
-</p>
+![The Mboko team](images/team.jpg)
 
 ## About this repository
 
@@ -93,6 +83,22 @@ Employees will be able to ask questions like:
 - *What do I need to complete in my first week?*
 
 When the documents do not answer a question, the assistant says so instead of inventing a policy.
+
+### The knowledge base
+
+The knowledge base contains **20 interconnected documents** across the six departments, all sharing one set of fictional people, project codes, approval limits and dates. Browse it from the [knowledge base index](documents/README.md).
+
+| Folder | Documents |
+|---|---|
+| Company-wide | Index, company profile and glossary, organization directory, approval authority matrix |
+| Production | Planning, scheduling and project register; equipment checkout; footage storage and handover |
+| Editorial | Standards and fact-checking; interview consent; review, bilingual publishing and corrections |
+| Creative and Design | Brand identity and design approval; asset naming, storage and licensing |
+| Partnerships and Marketing | Sponsorship and campaign workflow; social media publishing |
+| People and Administration | Employee handbook; leave and attendance; recruitment, onboarding and offboarding |
+| Finance and Operations | Expense claims and petty cash; procurement, vendors and invoices; budget planning and control |
+
+An [evaluation set of 47 questions](tests/knowledge_base/evaluation_questions.json) will be used to test the assistant. It covers direct facts, procedures, approval thresholds, register records, questions that need two or more documents, and 9 questions the documents cannot answer.
 
 ### How the assistant works
 
@@ -112,21 +118,26 @@ flowchart LR
 ### Repository structure
 
 ```
-mboko-media-group/
+mboko-knowledge-assistant/
 ├── documents/
+│   ├── README.md                     # Knowledge base index (COM-IDX-001)
+│   ├── company/
 │   ├── production/
 │   ├── editorial/
 │   ├── creative-and-design/
 │   ├── partnerships-and-marketing/
 │   ├── people-and-administration/
 │   └── finance-and-operations/
+├── tests/
+│   └── knowledge_base/
+│       └── evaluation_questions.json
 ├── images/
 └── README.md
 ```
 
 ## Roadmap
 
-- [ ] **Phase 1:** Company knowledge base, with realistic and consistent policies for all six departments
+- [x] **Phase 1:** Company knowledge base: 20 documents across six departments, plus a 47-question evaluation set
 - [ ] **Phase 2:** Project foundation: FastAPI app, configuration and database services
 - [ ] **Phase 3:** Document ingestion: loading, cleaning, chunking and source metadata
 - [ ] **Phase 4:** Embeddings, vector storage and retrieval
@@ -134,13 +145,8 @@ mboko-media-group/
 - [ ] **Phase 6:** Evaluation of retrieval, answer accuracy, citations and unanswerable questions
 - [ ] **Phase 7:** Tests, Docker, logging and a full demo
 
-<p align="center">
-  <img src="images/closing.jpg" alt="Douala at dusk" width="100%">
-</p>
+![Douala at dusk](images/closing.jpg)
 
-<p align="center">
-  <em>Our stories. Our world.</em><br>
-  Built by <a href="https://github.com/AshleyMekolle">Mekolle Ashley</a>
-</p>
+*Our stories. Our world.*
 
 <sub>Image credits: Pexel & Unsplash</sub>

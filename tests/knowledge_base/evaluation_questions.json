@@ -1,0 +1,472 @@
+[
+  {
+    "id": "Q001",
+    "question": "Who approves an expense of XAF 350,000?",
+    "expected_answer": "An expense of XAF 350,000 falls in the XAF 100,001 to 500,000 band, so it must be approved by the requester's Department Head and the Finance and Operations Manager (Emmanuel Kamga), recorded in Mboko Ledger. If the requester is a Department Head, the Managing Director approves in place of the Department Head.",
+    "expected_source_ids": [
+      "COM-POL-001",
+      "FIN-POL-001"
+    ],
+    "category": "approval_threshold",
+    "answerable": true
+  },
+  {
+    "id": "Q002",
+    "question": "Which department is responsible for fact-checking a documentary?",
+    "expected_answer": "The Editorial department. The Researcher and Fact-Checker (Linda Achu) fact-checks every documentary, series episode and article and produces the Fact-Check Report. Production supplies footage logs and transcripts, but responsibility for accuracy stays with Editorial.",
+    "expected_source_ids": [
+      "EDIT-POL-001",
+      "COM-REF-002"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q003",
+    "question": "What is the procedure for checking out camera equipment?",
+    "expected_answer": "Submit an equipment request in Mboko Board at least 3 working days before the shoot day with the asset tags, project code, dates and location. The Production Coordinator (Brenda Ngum) confirms availability within 1 working day; shoots outside Douala also need the Head of Production's approval. At collection, the Production Coordinator and borrower check each item together and both sign the checkout record in Mboko Board. Equipment is returned by 12:00 on the first working day after the last shoot day.",
+    "expected_source_ids": [
+      "PROD-POL-002"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q004",
+    "question": "Who approves a final social media campaign before publication?",
+    "expected_answer": "For a branded or sponsored campaign, the Head of Partnerships and Marketing (Joëlle Essomba) gives the final campaign publication approval, but only after Final Editorial Sign-off by the Editor-in-Chief, Creative Director approval of the assets and the client's written approval. Only then is the campaign set to Approved for Publication and scheduled by the Social Media and Audience Manager.",
+    "expected_source_ids": [
+      "MKT-POL-001",
+      "MKT-SOP-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q005",
+    "question": "What must be included in an interview consent record?",
+    "expected_answer": "The contributor's full name and on-screen name; date and location of the recording; project code and episode; how the content will be used (platforms, languages, editorial or branded); whether they agree to be identified by face, name, both or neither; the withdrawal deadline; the contributor's signature or recorded verbal consent; the name and signature of the Mboko employee who took consent; and, for minors, a parent or legal guardian's signature.",
+    "expected_source_ids": [
+      "EDIT-POL-002"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q006",
+    "question": "How should a factual error in a published story be handled?",
+    "expected_answer": "Report it to the Editor-in-Chief and the Researcher and Fact-Checker the same working day. The Researcher and Fact-Checker verifies it within 1 working day and the Editor-in-Chief classifies it. Minor errors are fixed without a note; significant errors are corrected within 24 hours of being confirmed with a dated correction note; serious errors are unpublished immediately while the Editor-in-Chief and Managing Director decide whether to correct or retract. Corrections apply to both language versions and related social posts, and are recorded in the Corrections Log.",
+    "expected_source_ids": [
+      "EDIT-SOP-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q007",
+    "question": "Where should completed footage be stored?",
+    "expected_answer": "On the office storage server MBK-NAS-01, under /Productions/{ProjectCode}/{EpisodeCode}/ with RAW, AUDIO, EDIT and MASTER folders. Footage is offloaded within 24 hours of the shoot day, with a second verified copy on the shuttle drive, and backed up to the off-site Mboko Archive within 72 hours. Footage must never be stored only on personal devices or personal cloud accounts.",
+    "expected_source_ids": [
+      "PROD-SOP-001"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q008",
+    "question": "What happens when a production deadline is at risk?",
+    "expected_answer": "The Production Coordinator or producer flags it as At Risk in Mboko Board and informs the Head of Production within 1 working day. The Head of Production agrees a recovery plan within 2 working days and informs the Editor-in-Chief and Head of Partnerships and Marketing if the publication date may change. If a client deliverable is affected, the Head of Partnerships and Marketing informs the client within 2 working days. Delays of more than 5 working days to a client deliverable are decided by the Managing Director.",
+    "expected_source_ids": [
+      "PROD-POL-001",
+      "MKT-SOP-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q009",
+    "question": "Who manages employee onboarding?",
+    "expected_answer": "The People and Administration department, led by the People and Administration Manager (Ruth Fon), who owns the onboarding procedure. Finance and Operations (Aïcha Bello) prepares the laptop and system accounts, and the hiring Department Head prepares the first-week plan and runs the probation check-ins.",
+    "expected_source_ids": [
+      "HR-SOP-001"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q010",
+    "question": "How should an employee request leave?",
+    "expected_answer": "Submit the request in MbokoHR. Leave of 1 to 3 working days needs at least 3 working days' notice; more than 3 working days needs at least 10 working days' notice. The Department Head approves or declines in MbokoHR within 2 working days (the Managing Director for Department Heads). Leave is confirmed only when shown as Approved in MbokoHR. Production employees need the Head of Production's approval for leave on scheduled shoot days.",
+    "expected_source_ids": [
+      "HR-POL-002"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q011",
+    "question": "What supporting documents are required for reimbursement?",
+    "expected_answer": "An original receipt or invoice for any purchase above XAF 3,000; a signed transport log entry for local trips up to XAF 3,000 without a receipt; a hotel invoice for accommodation; a receipt plus names and purpose for meals with contributors or clients; a fuel receipt plus vehicle registration and purpose for fuel; and a signed lost-receipt declaration approved by the Finance and Operations Manager if a receipt is lost (at most twice a year). Claims must be submitted in Mboko Ledger within 30 calendar days.",
+    "expected_source_ids": [
+      "FIN-POL-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q012",
+    "question": "What happens when a vendor invoice does not match the purchase order?",
+    "expected_answer": "If the difference is above the tolerance of 2% or XAF 10,000 (whichever is lower), the Finance and Operations Officer puts the invoice On Hold and does not pay it, and informs the requester and vendor in writing within 2 working days. It is resolved either by the vendor issuing a credit note or corrected invoice, or by revising the PO and approving it at the limit for the new total. The invoice is paid once the invoice, PO and GRN match. Invoices on hold over 10 working days are reported to the Finance and Operations Manager.",
+    "expected_source_ids": [
+      "FIN-SOP-001",
+      "COM-POL-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q013",
+    "question": "Which documents govern the handover from production to editorial?",
+    "expected_answer": "Three documents: the Footage Storage and Handover Procedure (PROD-SOP-001), which defines the Handover Package and its 3-working-day deadline; the Interview Consent and Contributor Release Policy (EDIT-POL-002), which defines what each consent record must contain; and the Editorial Review, Bilingual Publishing and Corrections Procedure (EDIT-SOP-001), which defines what Editorial does after receiving the handover.",
+    "expected_source_ids": [
+      "PROD-SOP-001",
+      "EDIT-POL-002",
+      "EDIT-SOP-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q014",
+    "question": "What are the responsibilities of Partnerships and Marketing during a sponsored campaign?",
+    "expected_answer": "Give the sponsor a status update every two weeks; make sure the sponsor credit and logo appear as the contract states with written logo permission on file; protect editorial independence by routing sponsor comments on editorial content to the Editor-in-Chief; coordinate sponsored posts with the Social Media and Audience Manager; inform the sponsor within 2 working days if a deliverable date changes; deliver interim and final performance reports; and confirm invoice milestones with Finance and Operations.",
+    "expected_source_ids": [
+      "MKT-SOP-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q015",
+    "question": "Which department owns the brand identity guidelines?",
+    "expected_answer": "The Creative and Design department. The Creative Director (Kevin Tabi) is the only person who may approve changes to the Mboko brand, and all departments must follow the guidelines.",
+    "expected_source_ids": [
+      "CREA-STD-001"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q016",
+    "question": "What are the approval steps for publishing content in both English and French?",
+    "expected_answer": "The Bilingual Editor (Claire Mvondo) produces the translation or subtitles from the approved fine cut; a second fluent reader (the Editor-in-Chief or Sawa Translations) checks it against the original; the Bilingual Editor approves the translation in Mboko Board; the Editor-in-Chief gives Final Editorial Sign-off on each language version separately; and both versions publish at the same time unless the Editor-in-Chief approves otherwise.",
+    "expected_source_ids": [
+      "EDIT-SOP-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q017",
+    "question": "How many days of annual leave do full-time employees get?",
+    "expected_answer": "24 working days of paid annual leave per calendar year, building up at 2 working days per full month worked. Up to 5 unused days can be carried over and must be used by 31 March of the next year.",
+    "expected_source_ids": [
+      "HR-POL-002"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q018",
+    "question": "What is the maximum amount that can be paid from petty cash, and who looks after it?",
+    "expected_answer": "The maximum single petty cash payment is XAF 25,000. The custodian is Aïcha Bello, Finance and Operations Officer. The float is XAF 150,000 and is replenished when it falls below XAF 40,000.",
+    "expected_source_ids": [
+      "FIN-POL-001"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q019",
+    "question": "Who must approve a purchase of XAF 1,200,000, and how many quotations are needed?",
+    "expected_answer": "The Department Head, the Finance and Operations Manager and the Managing Director must approve it, a purchase order is required, and 3 written quotations are needed because it is above XAF 1,000,000.",
+    "expected_source_ids": [
+      "COM-POL-001",
+      "FIN-SOP-001"
+    ],
+    "category": "approval_threshold",
+    "answerable": true
+  },
+  {
+    "id": "Q020",
+    "question": "What is the current status of the Kribi Coffee Collective campaign, and can it be published yet?",
+    "expected_answer": "Campaign CMP-2026-02 ('From Farm to Cup') is In Client Review, revision round 1 of 2. The rough cut was sent on 13 October 2026 and client feedback is due 20 October 2026. It cannot be published yet: Final Editorial Sign-off, the client's written approval of the final versions and the final campaign publication approval are still pending. Final delivery is due 20 November 2026 and launch is planned for 1 December 2026.",
+    "expected_source_ids": [
+      "MKT-SOP-001",
+      "PROD-POL-001"
+    ],
+    "category": "register_record",
+    "answerable": true
+  },
+  {
+    "id": "Q021",
+    "question": "When is the first Racines shoot block, and when is its Production Plan due?",
+    "expected_answer": "The first Racines Season 1 (MBK-RAC-S01) shoot block is in Foumban from 9 to 13 November 2026. The Production Plan is due 19 October 2026, 15 working days before the first shoot day.",
+    "expected_source_ids": [
+      "PROD-POL-001"
+    ],
+    "category": "register_record",
+    "answerable": true
+  },
+  {
+    "id": "Q022",
+    "question": "Why is invoice INV-AR-0917 on hold?",
+    "expected_answer": "INV-AR-0917 from Akwa Rentals is for XAF 640,000, but purchase order PO-2026-044 was for XAF 600,000. The XAF 40,000 (6.7%) difference is outside the tolerance, so it was put On Hold; the requester and vendor were informed on 9 October 2026, and Finance is waiting for a credit note or confirmation of extra equipment.",
+    "expected_source_ids": [
+      "FIN-SOP-001"
+    ],
+    "category": "register_record",
+    "answerable": true
+  },
+  {
+    "id": "Q023",
+    "question": "Who is the producer of Rues de Douala Season 1?",
+    "expected_answer": "Brenda Ngum, the Production Coordinator, is the producer of Rues de Douala Season 1 (MBK-RDD-S01).",
+    "expected_source_ids": [
+      "PROD-POL-001",
+      "COM-REF-002"
+    ],
+    "category": "register_record",
+    "answerable": true
+  },
+  {
+    "id": "Q024",
+    "question": "Can Banque Sawa review or approve the content of Mboa Makers episodes?",
+    "expected_answer": "No. Banque Sawa sponsors Mboa Makers Season 2 (CMP-2026-01), but every sponsorship contract includes an editorial independence clause: sponsors receive credits and agreed promotional placements but cannot review, approve or change editorial content. Banque Sawa's approval covers only the sponsor credits and sponsored posts.",
+    "expected_source_ids": [
+      "MKT-SOP-001",
+      "EDIT-POL-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q025",
+    "question": "What are the requirements for using a client's logo?",
+    "expected_answer": "The client must give written permission for the specific use (obtained by the Head of Partnerships and Marketing); the logo file must come from the client and follow the client's brand guidelines; the use must match what the contract allows; the asset must be approved by both the Creative Director and the Head of Partnerships and Marketing; and it must be sent to the client for written approval before publication. Mboko and client logos must never be combined into a joint logo.",
+    "expected_source_ids": [
+      "CREA-STD-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q026",
+    "question": "How should the final English YouTube thumbnail for Mboa Makers Season 2 episode 4 be named?",
+    "expected_answer": "Using the convention {ProjectCode}_{AssetType}_{Description}_{Language}_v{NN}.{ext} with _FINAL added after approval, for example MBK-MM-S02E04_THUMB_YouTube_EN_v03_FINAL.png. It is stored in /Creative/MBK-MM-S02/Final/ in Mboko Drive.",
+    "expected_source_ids": [
+      "CREA-STD-002"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q027",
+    "question": "Until when can a contributor withdraw their consent?",
+    "expected_answer": "Up to 7 calendar days before the scheduled publication date, after which Mboko removes their contribution. After that deadline the Editor-in-Chief still considers removal or blurring requests, and safety risks are always treated as urgent.",
+    "expected_source_ids": [
+      "EDIT-POL-002"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q028",
+    "question": "Who approves leave for a Department Head?",
+    "expected_answer": "The Managing Director approves leave for Department Heads, recorded in MbokoHR.",
+    "expected_source_ids": [
+      "HR-POL-002",
+      "COM-POL-001"
+    ],
+    "category": "approval_threshold",
+    "answerable": true
+  },
+  {
+    "id": "Q029",
+    "question": "When must a leaving employee's system access be removed?",
+    "expected_answer": "The Finance and Operations Manager removes access to all systems and accounts by 17:30 on the employee's last working day, and changes passwords of shared accounts the same day. If an employee is dismissed, access is removed immediately when they are informed.",
+    "expected_source_ids": [
+      "HR-SOP-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q030",
+    "question": "What is the per diem for work travel outside Douala, and what is the accommodation limit?",
+    "expected_answer": "The meals per diem is XAF 15,000 per day away from Douala, without receipts, and accommodation is reimbursed up to XAF 35,000 per night with an invoice. Per diem is not paid on days when meals are provided.",
+    "expected_source_ids": [
+      "FIN-POL-001"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q031",
+    "question": "How much of the Mboa Makers Season 2 budget has been spent, and who sponsors it?",
+    "expected_answer": "XAF 11,350,000 of the XAF 24,000,000 approved budget (47%) had been spent to 30 September 2026, and the project is forecast on budget. Season 2 is sponsored by Banque Sawa under a XAF 18,000,000 sponsorship (CMP-2026-01).",
+    "expected_source_ids": [
+      "FIN-POL-002",
+      "MKT-SOP-001"
+    ],
+    "category": "register_record",
+    "answerable": true
+  },
+  {
+    "id": "Q032",
+    "question": "Market Voices Season 3 is forecast to go over budget. By how much, and who can approve it?",
+    "expected_answer": "It is forecast at XAF 6,300,000 against an approved budget of XAF 6,000,000, which is 5% (XAF 300,000) over, mainly if invoice INV-AR-0917 is paid in full. Because this is below both 10% and XAF 500,000, the Finance and Operations Manager may approve moving money from another budget line, and no Managing Director approval for a total budget increase is needed.",
+    "expected_source_ids": [
+      "FIN-POL-002",
+      "COM-POL-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q033",
+    "question": "Can the 1950s archive photograph of the Foumban royal palace be used in Racines?",
+    "expected_answer": "No. Creative asset CA-2026-036 is marked Blocked: do not use, because the licence requested from the private archive has not been received. Material without a recorded licence must be removed before publication.",
+    "expected_source_ids": [
+      "CREA-STD-002"
+    ],
+    "category": "register_record",
+    "answerable": true
+  },
+  {
+    "id": "Q034",
+    "question": "A producer wants to film a 15-year-old for a Rues de Douala episode. What approvals and consent are needed?",
+    "expected_answer": "Written consent from a parent or legal guardian, the minor's own agreement in words they understand, and the Editor-in-Chief's approval before filming. Content featuring a minor is high-risk content, so the Managing Director must also approve it before publication, in addition to the Editor-in-Chief's Final Editorial Sign-off.",
+    "expected_source_ids": [
+      "EDIT-POL-002",
+      "EDIT-POL-001",
+      "COM-POL-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q035",
+    "question": "After both revision rounds, Kribi Coffee Collective asks for an extra shoot day. How is this handled?",
+    "expected_answer": "It is a change request because it is outside the brief and beyond the two included revision rounds. The Head of Partnerships and Marketing confirms the cost and schedule impact with the producer, sends a written change order to the client, and work starts only after the client accepts it in writing. The added cost is approved at the financial limits in the Approval Authority Matrix.",
+    "expected_source_ids": [
+      "MKT-SOP-001",
+      "COM-POL-001"
+    ],
+    "category": "multi_document",
+    "answerable": true
+  },
+  {
+    "id": "Q036",
+    "question": "How quickly must a significant factual error be corrected?",
+    "expected_answer": "Within 24 hours of the error being confirmed, with a dated correction note at the end of the article or video description, applied to both language versions.",
+    "expected_source_ids": [
+      "EDIT-SOP-001"
+    ],
+    "category": "direct_fact",
+    "answerable": true
+  },
+  {
+    "id": "Q037",
+    "question": "Which music library can editors use, and what is its limitation?",
+    "expected_answer": "SoundTrack Africa Library (vendor V-005), under Mboko's annual subscription, which covers online video and social media worldwide but not television broadcast. Branded content and anything that could be broadcast need a licence covering that use, checked with the Creative Director.",
+    "expected_source_ids": [
+      "CREA-STD-002"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q038",
+    "question": "Who prepares and who authorises vendor payments, and when are payments made?",
+    "expected_answer": "The Finance and Operations Officer (Aïcha Bello) prepares payments and the Finance and Operations Manager (Emmanuel Kamga) authorises them in the bank; payments above XAF 2,000,000 also need the Managing Director. Payments are made in the weekly payment run every Thursday.",
+    "expected_source_ids": [
+      "FIN-SOP-001",
+      "COM-POL-001"
+    ],
+    "category": "policy_procedure",
+    "answerable": true
+  },
+  {
+    "id": "Q039",
+    "question": "What is the Managing Director's monthly salary?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. Salary amounts are not documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q040",
+    "question": "What was Mboko Media Group's total revenue in 2025?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. No annual revenue figures are documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q041",
+    "question": "Does Mboko provide health insurance for employees?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. Employee health benefits are not documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q042",
+    "question": "What is the office Wi-Fi password?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. Credentials are never stored in the knowledge base.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q043",
+    "question": "When will Racines Season 2 start production?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. Only Racines Season 1 is documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q044",
+    "question": "How many YouTube subscribers does Mboko have?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. Channel audience size is not documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q045",
+    "question": "What is the dress code at the Mboko office?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. No dress code is documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q046",
+    "question": "What is the name of Mboko's external law firm?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. The documents mention an external legal adviser but never name one.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  },
+  {
+    "id": "Q047",
+    "question": "How much is the bonus for referring a new employee?",
+    "expected_answer": "The assistant should say that the available documents do not provide enough information to answer this question, and must not guess or invent an answer. No employee referral scheme is documented.",
+    "expected_source_ids": [],
+    "category": "unanswerable",
+    "answerable": false
+  }
+]
