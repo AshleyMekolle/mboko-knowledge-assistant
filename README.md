@@ -143,4 +143,4 @@ mboko-media-group/
   Built by <a href="https://github.com/AshleyMekolle">Mekolle Ashley</a>
 </p>
 
-<sub>Image credits: see <a href="images/CREDITS.md">images/CREDITS.md</a></sub>
+<sub>Image credits: Pexel & Unsplash</sub>
