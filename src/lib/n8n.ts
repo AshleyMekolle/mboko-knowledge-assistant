@@ -1,5 +1,13 @@
 import type { Source } from "./types";
 
+/** Public n8n Chat Trigger webhook. Override with the N8N_CHAT_WEBHOOK_URL environment variable. */
+const DEFAULT_WEBHOOK_URL =
+  "https://ashlet-mekolle.app.n8n.cloud/webhook/24d8d286-5298-424f-a516-9cbfc82f5653/chat";
+
+export function getWebhookUrl(): string {
+  return process.env.N8N_CHAT_WEBHOOK_URL?.trim() || DEFAULT_WEBHOOK_URL;
+}
+
 /**
  * n8n Chat Trigger (hosted chat) protocol, verified against the live webhook:
  *   POST <webhook>/chat   { action: "sendMessage", sessionId, chatInput }

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { buildN8nPayload, parseN8nReply } from "@/lib/n8n";
+import { buildN8nPayload, getWebhookUrl, parseN8nReply } from "@/lib/n8n";
 import type { ApiError, ChatResponse } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -18,8 +18,7 @@ function fail(error: string, status: number) {
  * browser bundle and normalises the response shape for the UI.
  */
 export async function POST(request: Request) {
-  const webhookUrl = process.env.N8N_CHAT_WEBHOOK_URL;
-  if (!webhookUrl) return fail("The assistant is not configured. Set N8N_CHAT_WEBHOOK_URL.", 500);
+  const webhookUrl = getWebhookUrl();
 
   let body: unknown;
   try {

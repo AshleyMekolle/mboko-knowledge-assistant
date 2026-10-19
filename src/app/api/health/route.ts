@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
+import { getWebhookUrl } from "@/lib/n8n";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /** Lightweight reachability probe for the header status indicator. */
 export async function GET() {
-  const webhookUrl = process.env.N8N_CHAT_WEBHOOK_URL;
-  if (!webhookUrl) return NextResponse.json({ ok: false }, { status: 503 });
+  const webhookUrl = getWebhookUrl();
   try {
     const res = await fetch(webhookUrl, {
       method: "GET",
