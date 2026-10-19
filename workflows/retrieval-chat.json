@@ -1,0 +1,235 @@
+{
+  "name": "Mboko Knowledge Assistant - Retrieval Test",
+  "nodes": [
+    {
+      "parameters": {
+        "mode": "load",
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "prompt": "={{ $json.question }}",
+        "topK": 5,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3,
+      "position": [
+        448,
+        0
+      ],
+      "id": "2f3b86ba-4db8-4905-b538-3bac5a6e50b3",
+      "name": "Search Knowledge Base",
+      "credentials": {
+        "supabaseApi": {
+          "id": "V44pEmFJqZ7MsXr5",
+          "name": "Supabase API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v3.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        528,
+        240
+      ],
+      "id": "ef6fad18-f28b-4f5b-8127-5c197b318ac3",
+      "name": "Embeddings Cohere",
+      "credentials": {
+        "cohereApi": {
+          "id": "zhAFq11a3pXmQRXM",
+          "name": "Cohere account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ \n  \"Question: \" + $('Set  Question').first().json.question +\n  \"\\n\\nRetrieved context:\\n\" + JSON.stringify($json.context)\n}}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=You are the Mboko Knowledge Assistant for Mboko Media Group.\n\nAnswer the user's question using only the retrieved context provided in the user message.\n\nIf the context does not contain the answer, say:\n\"I couldn't find that information in the Mboko knowledge base.\"\n\nDo not invent names, policies, figures, or procedures.\nKeep the answer clear and concise."
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        1024,
+        0
+      ],
+      "id": "9e68956b-8451-4c8a-a73b-b069a6d3f622",
+      "name": "Generate Answer"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-20b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1104,
+        240
+      ],
+      "id": "06c2d510-51fd-43d9-a409-c91c20fa8ee0",
+      "name": "Groq Chat Model - Mboko",
+      "credentials": {
+        "groqApi": {
+          "id": "QjE12nU9gLZ3joLH",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "context",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        800,
+        0
+      ],
+      "id": "722ed188-7d4d-48c8-b317-1946dad60f10",
+      "name": "Combine Retrieved Documents"
+    },
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi! I'm the Mboko Knowledge Assistant. Ask me anything about Mboko Media Group.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        -48,
+        -16
+      ],
+      "id": "d3617dcf-022e-4937-9618-75802351c8ae",
+      "name": "Mboko Chat Trigger",
+      "webhookId": "24d8d286-5298-424f-a516-9cbfc82f5653"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c37a7c22-1370-4f1a-a23d-6c0e565a754e",
+              "name": "question",
+              "value": "={{ $('Mboko Chat Trigger').item.json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "6684ecb0-7cb8-433e-8c49-8f13d4eeef96",
+      "name": "Set  Question"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Embeddings Cohere": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Search Knowledge Base",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Knowledge Base": {
+      "main": [
+        [
+          {
+            "node": "Combine Retrieved Documents",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model - Mboko": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate Answer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine Retrieved Documents": {
+      "main": [
+        [
+          {
+            "node": "Generate Answer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Answer": {
+      "main": [
+        []
+      ]
+    },
+    "Mboko Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set  Question",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set  Question": {
+      "main": [
+        [
+          {
+            "node": "Search Knowledge Base",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "e4c5beff-0d94-45e4-ad55-8f2e6f670d45",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a9a2bd3d3e3c166f28572eb49d334b513ddca5ffff6c29f32687a2b58f08ce95"
+  },
+  "nodeGroups": [],
+  "id": "Y6CEPKzyxCItMfHa",
+  "tags": []
+}
