@@ -78,9 +78,8 @@ This repository is Mboko's **internal knowledge base**: the policies, handbooks 
 
 **Project Demo (55 seconds)**
 
-[![Watch the Mboko Knowledge Assistant Demo](images/mboko-demo.gif)](motion-video/mboko-knowledge-assistant-showcase.mp4)
 
-[▶ Watch the full demo video](motion-video/mboko-knowledge-assistant-showcase.mp4)
+[▶ Watch the full demo video](motion-video/mboko-knowledge-assistant-showcase-github.mp4)
 
 Employees can ask questions like:
 
