@@ -76,7 +76,11 @@ This repository is Mboko's **internal knowledge base**: the policies, handbooks 
 
 **Live assistant:** [mboko-knowledge-assistant.vercel.app](https://mboko-knowledge-assistant.vercel.app)
 
-![Mboko Knowledge Assistant demo](images/mboko-demo.gif)
+**Project Demo (55 seconds)**
+
+[![Watch the Mboko Knowledge Assistant Demo](images/mboko-demo.gif)](motion-video/mboko-knowledge-assistant-showcase.mp4)
+
+[▶ Watch the full demo video](motion-video/mboko-knowledge-assistant-showcase.mp4)
 
 Employees can ask questions like:
 
